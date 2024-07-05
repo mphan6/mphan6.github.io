@@ -1,0 +1,282 @@
+:root {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-color: #242424;
+  color: rgba(255, 255, 255, 0.87);
+  color-scheme: light dark;
+  font-synthesis: none;
+  font-weight: 400;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+a.main {
+  color: #ffffff;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 600;
+  text-decoration: inherit;
+}
+a.short {
+  color: #96AAFD;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 600;
+  text-decoration: inherit;
+}
+a:visited.short {
+  color: #969696;
+}
+a:hover.short {
+  color: #888EF6;
+}
+
+.basic-bg {
+  height: 100vh;
+}
+
+.basic-color {
+  background-color: #020202;
+}
+
+.bg-img-color {
+  background-color: #96aafd;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  min-height: 100vh;
+  min-width: 320px;
+  place-items: center;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 550;
+}
+.button {
+  display: block;
+  background: #000000;
+  border-radius: 0.5rem/25%;
+  width: 30%;
+  padding: .6rem;
+  text-align: center;
+  font-size: 1rem;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 550;
+}
+@media screen and (max-width: 1100px) {
+  .button {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1100px) and (max-width: 1500px) {
+  .button {
+    width: 45%;
+  }
+}
+
+.icons {
+  margin-top: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+.dm-sans-regular {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 1000;
+}
+
+.dm-serif-display-regular {
+  font-family: "DM Serif Display", serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.dm-serif-display-regular-italic {
+  font-family: "DM Serif Display", serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.fixed {
+  border-bottom-right-radius: 2rem;
+  border-top-right-radius: 2rem;
+  color: #ffffff;
+  height: 100vh;
+  position: fixed;
+  overflow: overlay;
+}
+
+.hidden {
+  display: none!important;
+  visibility: hidden!important;
+}
+
+.icon{
+  width: 2rem;
+}
+.italic {
+  font-style: italic;
+  font-weight: 700;
+
+}
+
+.main-content {
+  margin-top: 9rem !important;
+}
+
+.max-height {
+  max-height: 100%;
+}
+
+.max-width {
+  max-width: 100%;
+}
+
+.min-height {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.no-bullets {
+  list-style-type: none;
+  padding-left: 0rem;
+}
+
+.pic {
+  border-radius: 25%;
+  height: 18rem;
+  width: 18rem;
+}
+
+.slide-in {
+  animation: slideIn 0.5s forwards;
+}
+
+section {
+  background: var(--dark-bg);
+  font-size: 1.25rem;
+  grid-column: 2 / 8;
+  line-height: 1.5;
+  margin-bottom: var(--spacing);
+  padding: 1rem;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+header {
+  background: var(--dark-bg);
+  font-size: 2.5rem;
+  grid-column: 2 / span 5;
+  margin-bottom: var(--spacing);
+  padding: 2rem;
+}
+
+h1 {
+  font-family: "DM Serif Display", serif;
+  font-size: 3.2em;
+  font-style: normal;
+  line-height: 1.1;
+}
+
+h2 {
+  font-family: "DM Serif Display", serif;
+  font-size: 2.5em;
+  font-style: normal;
+  line-height: 3rem;
+}
+
+h3 {
+  font-family: "DM Serif Display", serif;
+  font-size: 1.6em;
+  font-style: normal;
+  line-height: 3rem;
+}
+h4 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.2em;
+  font-style: normal;
+  font-weight: 550;
+  line-height: 1.5rem;
+}
+hr {
+  border: none;
+  height: 2px;
+  background-color: #000000;
+  opacity: 0.6;
+}
+hr.light {
+  border: none;
+  height: 2px;
+  width:50%;
+  margin-left: 15%;
+  margin-top: 2%;
+  margin-bottom: 3%;
+  background-color: #000000;
+  opacity: .3;
+}
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+main {
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 0px auto;
+  padding: 120px 0px;
+  position: absolute;
+  width: 100%;
+  width: 100vw;
+  z-index: 99;
+}
+.name {
+  font-size: 3.5em;
+  margin-top: 2rem;
+}
+
+section {
+  background: var(--dark-bg);
+  font-size: 1.25rem;
+  grid-column: 2 / 8;
+  line-height: 1.5;
+  margin-bottom: var(--spacing);
+  padding: 1rem;
+}
+
+.side-summary{
+  margin-top: 3rem;
+}
+.fixed::-webkit-scrollbar {
+  width: 0.7em;
+}
+.fixed::-webkit-scrollbar-thumb {
+  background: #000000;
+}
+
+.fixed::-webkit-scrollbar-track-piece
+{
+   display:none;
+}
