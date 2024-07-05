@@ -35,7 +35,7 @@ const Basic: React.FC = () => {
                             <li><FontAwesomeIcon icon={faGraduationCap} style={{color:"#96AAFE"}}/> B.Tech Software Development</li>
                         </ul>
                         <div className='icons'>
-                            <a href='./src/assets/Matts_resume_LaTeX.pdf' target="_blank" aria-label="Download Matthew's Resume">
+                            <a href='./Matts_resume_LaTeX.pdf' target="_blank" aria-label="Download Matthew's Resume">
                                 <FontAwesomeIcon icon={faC} size="lg" style={{color: "#96AAFE"}} />
                                 <FontAwesomeIcon icon={faV} size="lg" style={{color: "#96AAFE", marginRight:"1rem"}} />
                             </a>                        
