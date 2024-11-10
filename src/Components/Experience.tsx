@@ -26,7 +26,7 @@ const Projects: React.FC = () =>
             <button className={`btn btn-primary button ${fSlideIn ? 'hidden' : ''} `} onClick={() => setfSlideIn(true)} >More Details</button>
                 <div className={`${!fSlideIn ? 'hidden' : 'slide-in'} `}>
                     <ul >
-                        <li> Conducted monthly R&D code review and knowledge share sessions improving efficiency and quality of the code base.</li>
+                        <li>Conducted monthly R&D code review and knowledge share sessions improving efficiency and quality of the code base.</li>
                         <li>Enhanced the existing REST API security: OWASP standards, Veracode SAST/DAST, and PII compliance.</li>
                         <li>Mentored five junior developers promoting best practices, code quality, and documentation standards, fostering a culture of learning and growth.</li>
                     </ul>
