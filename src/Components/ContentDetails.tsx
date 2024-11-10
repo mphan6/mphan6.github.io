@@ -40,8 +40,7 @@ const ContentDetails: React.FC<ContentDetailsProps> = ({
                         </ul>
                         <h4 className='italic'>Technologies:</h4>
                         <ul className='no-bullets'>
-                            <li>REST, GraphQL, gRPC, Git, SVN, .NET Core, .NET, ASP.NET, Vue.js, React, Docker, RDBMS, MongoDB,
-                            redis, OpenAPI</li>
+                            <li>React, Vue.js, REST, Node.js, GraphQL, gRPC, Git, SVN, .NET Core, .NET, ASP.NET, Docker, AWS, RDBMS, MongoDB, redis, OpenAPI.</li>
                         </ul>
                         <h4 className='italic'>IDEs:</h4>
                         <ul className='no-bullets'>
