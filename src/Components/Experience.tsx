@@ -4,6 +4,7 @@ const Projects: React.FC = () =>
 {
     const [eSlideIn, setESlideIn] = useState(false);
     const [fSlideIn, setfSlideIn] = useState(false);
+    const [xSlideIn, setxSlideIn] = useState(false);
 
     return (
         <div>
@@ -35,8 +36,8 @@ const Projects: React.FC = () =>
             <div className={`${!eSlideIn ? 'hidden' : 'slide-in'} `}>
             <h3>General Manager</h3>
             <p className='italic'><a style={{color:'black'}}href="https://www.fiveguys.ca/">@Five Guys</a></p>
-            <button className={`btn btn-primary button ${fSlideIn ? 'hidden' : ''} `} onClick={() => setfSlideIn(true)} >More Details</button>
-                <div className={`${!fSlideIn ? 'hidden' : 'slide-in'} `}>
+            <button className={`btn btn-primary button ${xSlideIn ? 'hidden' : ''} `} onClick={() => setxSlideIn(true)} >More Details</button>
+                <div className={`${!xSlideIn ? 'hidden' : 'slide-in'} `}>
                     <ul >
                         <li>Maintained impeccable health, safety, and brand standards, earning recognition within the top 1% of Five Guys locations in North America for operational excellence and customer satisfaction.</li>
                         <li>Created and executed training programs that enhanced employees' skills and promoted growth, resulting in 5 employees being promoted to supervisory positions.</li>
