@@ -12,12 +12,12 @@ const Projects: React.FC = () =>
             <button className={`btn btn-primary button ${eSlideIn ? 'hidden' : ''} `} onClick={() => setESlideIn(true)} >Show Experience</button>
             <div className={`${!eSlideIn ? 'hidden' : 'slide-in'} `}>
                 <ul >
-                    <li>Spearheaded a successful accessibility initiative for the LinkV4 customer portal, ensuring WCAG compliance and achieving a 90% accessibility rating, improving user experience.</li>
+                    <li>Designed and deployed a stateless micro-service using .NET Framework with REST API for generating and exporting reports, supporting scalability and ease of monitoring in both on-premise and cloud environments.</li>
                     <li>Rewrote the scheduling service software, enhancing robustness and reliability by 100%, leading to increased system stability and performance.</li>
-                    <li>Led the integration of third-party systems (FIS, Cisco Finesse, AMI Interfaces) into company products, collaborating with project managers and technical consultants to ensure seamless data flow</li>
-                    <li>Conducted monthly R&D code review and knowledge share sessions improving efficiency and quality of the code base.</li>
-                    <li>Enhanced the existing REST API security: OWASP standards, Veracode SAST/DAST, and PII compliance.</li>
-                    <li>Mentored five junior developers promoting best practices, code quality, and documentation standards, fostering a culture of learning and growth.</li>
+                    <li>Led the development of WCAG-compliant features for the customer portal, achieving a 90% accessibility rating and improving digital accessibility for all users.</li>
+                    <li>Led the integration of third-party systems such as FIS payments, Cisco Finesse, and several AMI Interfaces, ensuring seamless data flow for mission-critical transactions.</li>
+                    <li>Worked on full-stack development of reactive web applications using VueJS, TypeScript, and Node.js, contributing to both front-end and back-end improvements</li>
+                    <li>Rewrote the scheduling service software, doubling robustness and reliability by leading to increased system stability and performance.</li>
                 </ul>
             </div>
             <div className={`${!eSlideIn ? 'hidden' : 'slide-in'} `}>
@@ -26,10 +26,7 @@ const Projects: React.FC = () =>
             <button className={`btn btn-primary button ${fSlideIn ? 'hidden' : ''} `} onClick={() => setfSlideIn(true)} >More Details</button>
                 <div className={`${!fSlideIn ? 'hidden' : 'slide-in'} `}>
                     <ul >
-                        <li>Spearheaded a successful accessibility initiative for the LinkV4 customer portal, ensuring WCAG compliance and achieving a 90% accessibility rating, improving user experience.</li>
-                        <li>Rewrote the scheduling service software, enhancing robustness and reliability by 100%, leading to increased system stability and performance.</li>
-                        <li>Led the integration of third-party systems (FIS, Cisco Finesse, AMI Interfaces) into company products, collaborating with project managers and technical consultants to ensure seamless data flow</li>
-                        <li>Conducted monthly R&D code review and knowledge share sessions improving efficiency and quality of the code base.</li>
+                        <li> Conducted monthly R&D code review and knowledge share sessions improving efficiency and quality of the code base.</li>
                         <li>Enhanced the existing REST API security: OWASP standards, Veracode SAST/DAST, and PII compliance.</li>
                         <li>Mentored five junior developers promoting best practices, code quality, and documentation standards, fostering a culture of learning and growth.</li>
                     </ul>
