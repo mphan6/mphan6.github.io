@@ -6,10 +6,12 @@
   'use strict';
 
   // ── Active nav link ──────────────────────────────────────────
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const normalizePath = (path) => path.replace(/\/+$/, '') || '/';
+  const currentPath = normalizePath(window.location.pathname);
+
   document.querySelectorAll('.nav-link').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+    const href = normalizePath(link.getAttribute('href') || '');
+    if (href === currentPath) {
       link.classList.add('active');
       link.setAttribute('aria-current', 'page');
     }
