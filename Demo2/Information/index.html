@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Information | Jessica Chen OT</title>
+  <meta name="description" content="Learn about Jessica Chen's background, qualifications, and clinical skills as an Occupational Therapist.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --bg: #050d1f; --cyan: #06b6d4; --purple: #8b5cf6; --green: #10b981;
+      --glass: rgba(255,255,255,0.04); --glass-border: rgba(255,255,255,0.08);
+      --text: #f0f9ff; --muted: #94a3b8; --dim: #64748b;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); font-family: 'Open Sans', sans-serif; color: var(--text); overflow-x: hidden; }
+    h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }
+    .bg-scene { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+    .orb { position: absolute; border-radius: 50%; filter: blur(90px); opacity: 0.11; }
+    .orb-1 { width: 600px; height: 600px; background: radial-gradient(circle, #7c3aed, transparent); top: -100px; left: -100px; }
+    .orb-2 { width: 500px; height: 500px; background: radial-gradient(circle, #06b6d4, transparent); bottom: 100px; right: -100px; }
+    .grid-bg { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 56px 56px; }
+    nav { position: fixed; top: 16px; left: 50%; transform: translateX(-50%); z-index: 100; width: calc(100% - 40px); max-width: 1100px; border-radius: 16px; background: rgba(5,13,31,0.85); border: 1px solid rgba(255,255,255,0.08); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .logo-icon { width: 38px; height: 38px; background: linear-gradient(135deg, #06b6d4, #8b5cf6); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .logo-name { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--text); line-height: 1.1; }
+    .logo-tag { font-size: 0.65rem; color: var(--cyan); letter-spacing: 0.08em; font-weight: 500; }
+    .nav-links { display: flex; align-items: center; gap: 2px; }
+    .nav-link { color: var(--muted); font-family: 'Poppins', sans-serif; font-size: 0.875rem; font-weight: 500; text-decoration: none; padding: 7px 14px; border-radius: 8px; transition: color 0.2s, background 0.2s; }
+    .nav-link:hover, .nav-link.active { color: var(--text); background: rgba(255,255,255,0.07); }
+    .nav-cta { font-family: 'Poppins', sans-serif; font-size: 0.85rem; font-weight: 500; color: #fff; background: linear-gradient(135deg, #06b6d4, #8b5cf6); padding: 8px 20px; border-radius: 8px; text-decoration: none; transition: opacity 0.2s; }
+    .nav-cta:hover { opacity: 0.88; }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; color: var(--muted); padding: 4px; }
+    .mobile-menu { display: none; flex-direction: column; padding: 8px 12px 12px; gap: 2px; border-top: 1px solid rgba(255,255,255,0.06); }
+    .mobile-menu a { color: var(--muted); font-family: 'Poppins', sans-serif; font-size: 0.9rem; font-weight: 500; text-decoration: none; padding: 10px 14px; border-radius: 8px; display: block; transition: color 0.2s, background 0.2s; }
+    .mobile-menu a:hover { color: var(--text); background: rgba(255,255,255,0.05); }
+    .mobile-menu .m-cta { margin-top: 8px; text-align: center; background: linear-gradient(135deg, #06b6d4, #8b5cf6); color: #fff; border-radius: 8px; }
+    .glass { background: var(--glass); border: 1px solid var(--glass-border); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-radius: 16px; transition: background 0.3s, border-color 0.3s, transform 0.3s, box-shadow 0.3s; }
+    .glass:hover { background: rgba(255,255,255,0.07); border-color: rgba(6,182,212,0.25); transform: translateY(-3px); box-shadow: 0 16px 40px rgba(6,182,212,0.08); }
+    .glass-static { background: var(--glass); border: 1px solid var(--glass-border); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-radius: 16px; }
+    .btn-primary { font-family: 'Poppins', sans-serif; font-weight: 500; color: #fff; background: linear-gradient(135deg, #06b6d4, #8b5cf6); padding: 12px 28px; border-radius: 9px; border: none; cursor: pointer; text-decoration: none; display: inline-block; font-size: 0.95rem; transition: opacity 0.2s, transform 0.2s; }
+    .btn-primary:hover { opacity: 0.88; transform: translateY(-2px); }
+    .grad-text { background: linear-gradient(135deg, #f0f9ff 0%, #06b6d4 55%, #8b5cf6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .grad-cyan { background: linear-gradient(135deg, #06b6d4, #38bdf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .badge { display: inline-block; background: rgba(6,182,212,0.1); border: 1px solid rgba(6,182,212,0.3); color: var(--cyan); padding: 4px 14px; border-radius: 20px; font-size: 0.75rem; font-family: 'Poppins', sans-serif; font-weight: 600; letter-spacing: 0.04em; }
+    .badge-purple { background: rgba(139,92,246,0.1); border-color: rgba(139,92,246,0.3); color: #c4b5fd; }
+    .badge-green { background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.3); color: #6ee7b7; }
+    .section { position: relative; z-index: 1; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(6,182,212,0.3), rgba(139,92,246,0.3), transparent); }
+    .skill-bar { height: 6px; background: rgba(255,255,255,0.07); border-radius: 3px; overflow: hidden; }
+    .skill-fill { height: 100%; border-radius: 3px; background: linear-gradient(90deg, #06b6d4, #8b5cf6); transition: width 1.2s ease; }
+    footer { border-top: 1px solid rgba(255,255,255,0.06); }
+    @media (prefers-reduced-motion: reduce) { .glass:hover { transform: none; } .btn-primary:hover { transform: none; } }
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta-wrap { display: none; }
+      .hamburger { display: block; }
+      .mobile-menu.open { display: flex; }
+      .two-col { grid-template-columns: 1fr !important; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="bg-scene">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="grid-bg"></div>
+</div>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav-inner">
+    <a href="../" class="nav-logo">
+      <div class="logo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2"><path d="M12 2a7 7 0 0 1 7 7c0 4-3 6.5-5.5 8.5C11.5 19.5 12 22 12 22s.5-2.5-1.5-4.5C8 15.5 5 13 5 9a7 7 0 0 1 7-7z" fill="rgba(255,255,255,0.15)"/><circle cx="12" cy="9" r="2.5" fill="white" stroke="none"/></svg></div>
+      <div><div class="logo-name">Jessica Chen, BOT</div><div class="logo-tag">OCCUPATIONAL THERAPIST</div></div>
+    </a>
+    <div class="nav-links">
+      <a href="../" class="nav-link">Home</a>
+      <a href="../Information/" class="nav-link active">Information</a>
+      <a href="../Services/" class="nav-link">Services</a>
+      <a href="../Contact/" class="nav-link">Contact</a>
+    </div>
+    <div class="nav-cta-wrap"><a href="../Contact/" class="nav-cta">Book Now</a></div>
+    <button class="hamburger" onclick="toggleNav()" aria-label="Toggle navigation" aria-expanded="false" id="ham-btn">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mob-menu">
+    <a href="../">Home</a>
+    <a href="../Information/">Information</a>
+    <a href="../Services/">Services</a>
+    <a href="../Contact/">Contact</a>
+    <a href="../Contact/" class="m-cta">Book a Consultation</a>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="section" style="padding:140px 24px 80px;">
+  <div class="container">
+    <div style="text-align:center;max-width:700px;margin:0 auto;">
+      <div class="badge badge-purple" style="margin-bottom:18px;">About Me</div>
+      <h1 style="font-size:clamp(2.2rem,5vw,3.4rem);font-weight:800;line-height:1.15;margin-bottom:20px;">
+        <span class="grad-text">Passionate About</span><br>Restoring Potential
+      </h1>
+      <p style="color:var(--muted);font-size:1rem;line-height:1.75;">Combining clinical expertise with a genuine commitment to helping each person live with greater independence, purpose, and quality of life.</p>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO / BIO -->
+<section class="section" style="padding:20px 24px 80px;">
+  <div class="container">
+    <div class="two-col" style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;">
+
+      <!-- Bio text -->
+      <div>
+        <div class="badge" style="margin-bottom:16px;">Introduction</div>
+        <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:var(--text);margin-bottom:20px;">Hi, I'm <span class="grad-cyan">Jessica Chen</span></h2>
+        <div style="display:flex;flex-direction:column;gap:16px;color:var(--muted);font-size:0.95rem;line-height:1.75;">
+          <p>I am a Bachelor of Occupational Therapy (BOT) graduate with over eight years of clinical experience working across acute, subacute, community, and paediatric settings. My journey into occupational therapy was driven by a deep belief that <em style="color:var(--text);font-style:normal;font-weight:500;">every person deserves to fully participate in the activities that give their life meaning.</em></p>
+          <p>Throughout my career, I have supported individuals recovering from stroke, traumatic brain injury, orthopaedic procedures and mental health challenges, as well as children navigating developmental and sensory processing difficulties. I bring both scientific rigour and compassionate listening to each therapeutic relationship.</p>
+          <p>My practice is grounded in evidence-based models including the <strong style="color:var(--text);font-weight:600;">Canadian Model of Occupational Performance and Engagement (CMOP-E)</strong> and the <strong style="color:var(--text);font-weight:600;">Person-Environment-Occupation (PEO) model</strong>, ensuring that therapy is always contextual, client-directed, and meaningful.</p>
+        </div>
+        <div style="margin-top:28px;">
+          <a href="../Contact/" class="btn-primary">Get in Touch</a>
+        </div>
+      </div>
+
+      <!-- Profile card + credentials -->
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <!-- Profile card -->
+        <div class="glass-static" style="padding:28px;border-radius:20px;">
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:22px;">
+            <div style="width:64px;height:64px;background:linear-gradient(135deg,#06b6d4,#8b5cf6);border-radius:18px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div>
+              <div style="font-family:Poppins,sans-serif;font-weight:700;font-size:1.1rem;color:var(--text);">Jessica Chen</div>
+              <div style="color:var(--cyan);font-size:0.8rem;font-weight:500;">Bachelor of Occupational Therapy</div>
+              <div style="color:var(--dim);font-size:0.75rem;margin-top:2px;">AHPRA Registered &nbsp;&middot;&nbsp; OT Australia Member</div>
+            </div>
+          </div>
+          <div class="divider" style="margin-bottom:18px;"></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+            <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:12px;">
+              <div style="color:var(--dim);font-size:0.65rem;letter-spacing:0.06em;margin-bottom:4px;">EXPERIENCE</div>
+              <div style="font-family:Poppins,sans-serif;font-weight:700;font-size:1.2rem;color:var(--text);">8+ years</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:12px;">
+              <div style="color:var(--dim);font-size:0.65rem;letter-spacing:0.06em;margin-bottom:4px;">CLIENTS</div>
+              <div style="font-family:Poppins,sans-serif;font-weight:700;font-size:1.2rem;color:var(--text);">500+</div>
+            </div>
+          </div>
+        </div>
+        <!-- Credentials -->
+        <div class="glass-static" style="padding:24px;border-radius:20px;">
+          <div style="font-size:0.72rem;font-weight:600;letter-spacing:0.08em;color:var(--dim);margin-bottom:14px;">QUALIFICATIONS &amp; CREDENTIALS</div>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div style="display:flex;align-items:flex-start;gap:12px;">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--cyan);margin-top:6px;flex-shrink:0;"></div>
+              <div><div style="color:var(--text);font-size:0.875rem;font-weight:500;">Bachelor of Occupational Therapy</div><div style="color:var(--dim);font-size:0.78rem;">University of Sydney, 2016</div></div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:12px;">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--cyan);margin-top:6px;flex-shrink:0;"></div>
+              <div><div style="color:var(--text);font-size:0.875rem;font-weight:500;">AHPRA Registered Occupational Therapist</div><div style="color:var(--dim);font-size:0.78rem;">Australian Health Practitioner Regulation Agency</div></div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:12px;">
+              <div style="width:8px;height:8px;border-radius:50%;background:#a78bfa;margin-top:6px;flex-shrink:0;"></div>
+              <div><div style="color:var(--text);font-size:0.875rem;font-weight:500;">Certificate in Hand Therapy</div><div style="color:var(--dim);font-size:0.78rem;">SplintingCourse Australia, 2019</div></div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:12px;">
+              <div style="width:8px;height:8px;border-radius:50%;background:#a78bfa;margin-top:6px;flex-shrink:0;"></div>
+              <div><div style="color:var(--text);font-size:0.875rem;font-weight:500;">Assistive Technology Certification</div><div style="color:var(--dim);font-size:0.78rem;">ATSA Accredited Practitioner, 2021</div></div>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:12px;">
+              <div style="width:8px;height:8px;border-radius:50%;background:#34d399;margin-top:6px;flex-shrink:0;"></div>
+              <div><div style="color:var(--text);font-size:0.875rem;font-weight:500;">OT Australia Member</div><div style="color:var(--dim);font-size:0.78rem;">Occupational Therapy Australia</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<section class="section" style="padding:0 24px;">
+  <div class="container"><div class="divider"></div></div>
+</section>
+
+<!-- SKILLS -->
+<section class="section" style="padding:80px 24px;">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:52px;">
+      <div class="badge" style="margin-bottom:14px;">Clinical Expertise</div>
+      <h2 style="font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:700;color:var(--text);margin-bottom:14px;">Skills &amp; <span class="grad-cyan">Specialties</span></h2>
+      <p style="color:var(--muted);max-width:460px;margin:0 auto;font-size:0.95rem;line-height:1.7;">A broad clinical skill set developed across diverse healthcare settings over 8+ years of practice.</p>
+    </div>
+
+    <!-- Skill bars -->
+    <div class="two-col" style="display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-bottom:56px;">
+      <div style="display:flex;flex-direction:column;gap:22px;">
+        <div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+            <span style="color:var(--text);font-size:0.9rem;font-weight:500;">Activities of Daily Living (ADL) Training</span>
+            <span style="color:var(--cyan);font-size:0.82rem;font-weight:600;">Expert</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="width:95%;"></div></div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+            <span style="color:var(--text);font-size:0.9rem;font-weight:500;">Neurological Rehabilitation</span>
+            <span style="color:var(--cyan);font-size:0.82rem;font-weight:600;">Expert</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="width:92%;"></div></div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+            <span style="color:var(--text);font-size:0.9rem;font-weight:500;">Hand Therapy &amp; Splinting</span>
+            <span style="color:var(--cyan);font-size:0.82rem;font-weight:600;">Advanced</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="width:88%;"></div></div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+            <span style="color:var(--text);font-size:0.9rem;font-weight:500;">Paediatric Occupational Therapy</span>
+            <span style="color:var(--cyan);font-size:0.82rem;font-weight:600;">Advanced</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="width:85%;"></div></div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+            <span style="color:var(--text);font-size:0.9rem;font-weight:500;">Cognitive Rehabilitation</span>
+            <span style="color:var(--cyan);font-size:0.82rem;font-weight:600;">Advanced</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="width:84%;"></div></div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:22px;">
+        <div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+            <span style="color:var(--text);font-size:0.9rem;font-weight:500;">Sensory Integration Therapy</span>
+            <span style="color:var(--cyan);font-size:0.82rem;font-weight:600;">Advanced</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="width:82%;"></div></div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+            <span style="color:var(--text);font-size:0.9rem;font-weight:500;">Assistive Technology Prescription</span>
+            <span style="color:var(--cyan);font-size:0.82rem;font-weight:600;">Advanced</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="width:80%;"></div></div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+            <span style="color:var(--text);font-size:0.9rem;font-weight:500;">Workplace &amp; Ergonomic Assessment</span>
+            <span style="color:var(--muted);font-size:0.82rem;font-weight:600;">Proficient</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="width:75%;"></div></div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+            <span style="color:var(--text);font-size:0.9rem;font-weight:500;">Home Modification &amp; Falls Prevention</span>
+            <span style="color:var(--muted);font-size:0.82rem;font-weight:600;">Proficient</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="width:78%;"></div></div>
+        </div>
+        <div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+            <span style="color:var(--text);font-size:0.9rem;font-weight:500;">Mental Health &amp; Wellbeing Support</span>
+            <span style="color:var(--muted);font-size:0.82rem;font-weight:600;">Proficient</span>
+          </div>
+          <div class="skill-bar"><div class="skill-fill" style="width:76%;"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Specialty tags -->
+    <div style="text-align:center;margin-bottom:18px;">
+      <div style="color:var(--dim);font-size:0.78rem;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px;">Areas of Practice</div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
+        <span class="badge">Stroke &amp; TBI</span>
+        <span class="badge">Orthopaedics</span>
+        <span class="badge badge-purple">Paediatrics</span>
+        <span class="badge badge-purple">Autism &amp; ADHD</span>
+        <span class="badge">Hand &amp; Upper Limb</span>
+        <span class="badge badge-green">Mental Health</span>
+        <span class="badge">Aged Care</span>
+        <span class="badge badge-purple">NDIS Participants</span>
+        <span class="badge">Community Rehab</span>
+        <span class="badge badge-green">Return to Work</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="section" style="padding:0 24px 80px;">
+  <div class="container">
+    <div class="divider" style="margin-bottom:60px;"></div>
+    <div style="text-align:center;margin-bottom:44px;">
+      <div class="badge badge-purple" style="margin-bottom:14px;">My Approach</div>
+      <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:var(--text);">Principles That Guide My <span class="grad-cyan">Practice</span></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;">
+      <div class="glass" style="padding:26px;">
+        <div style="width:44px;height:44px;background:rgba(6,182,212,0.12);border:1px solid rgba(6,182,212,0.25);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 style="font-size:0.95rem;font-weight:600;color:var(--text);margin-bottom:8px;">Client-Centred</h3>
+        <p style="color:var(--dim);font-size:0.85rem;line-height:1.6;">Your goals, priorities, and lived experience are placed at the centre of every therapeutic decision.</p>
+      </div>
+      <div class="glass" style="padding:26px;">
+        <div style="width:44px;height:44px;background:rgba(139,92,246,0.12);border:1px solid rgba(139,92,246,0.25);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        </div>
+        <h3 style="font-size:0.95rem;font-weight:600;color:var(--text);margin-bottom:8px;">Evidence-Based</h3>
+        <p style="color:var(--dim);font-size:0.85rem;line-height:1.6;">Each intervention is grounded in current research and best-practice clinical guidelines.</p>
+      </div>
+      <div class="glass" style="padding:26px;">
+        <div style="width:44px;height:44px;background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.25);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93A10 10 0 0 1 22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2"/></svg>
+        </div>
+        <h3 style="font-size:0.95rem;font-weight:600;color:var(--text);margin-bottom:8px;">Holistic View</h3>
+        <p style="color:var(--dim);font-size:0.85rem;line-height:1.6;">Considering the whole person — body, mind, and environment — to achieve meaningful, lasting outcomes.</p>
+      </div>
+      <div class="glass" style="padding:26px;">
+        <div style="width:44px;height:44px;background:rgba(6,182,212,0.12);border:1px solid rgba(6,182,212,0.25);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3 style="font-size:0.95rem;font-weight:600;color:var(--text);margin-bottom:8px;">Collaborative</h3>
+        <p style="color:var(--dim);font-size:0.85rem;line-height:1.6;">Working alongside carers, families, and the broader healthcare team to ensure a coordinated approach.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="section" style="padding:56px 24px 36px;">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px;margin-bottom:40px;">
+      <div>
+        <a href="../" class="nav-logo" style="margin-bottom:12px;display:inline-flex;">
+          <div class="logo-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2"><path d="M12 2a7 7 0 0 1 7 7c0 4-3 6.5-5.5 8.5C11.5 19.5 12 22 12 22s.5-2.5-1.5-4.5C8 15.5 5 13 5 9a7 7 0 0 1 7-7z" fill="rgba(255,255,255,0.15)"/><circle cx="12" cy="9" r="2.5" fill="white" stroke="none"/></svg></div>
+          <div><div class="logo-name">Jessica Chen, BOT</div><div class="logo-tag">OCCUPATIONAL THERAPIST</div></div>
+        </a>
+        <p style="color:var(--dim);font-size:0.85rem;line-height:1.65;max-width:280px;margin-top:12px;">Compassionate, evidence-based occupational therapy for adults and children.</p>
+      </div>
+      <div>
+        <h4 style="font-size:0.75rem;font-weight:600;color:var(--text);letter-spacing:0.08em;margin-bottom:16px;">SITE</h4>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="../" style="color:var(--dim);font-size:0.875rem;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#06b6d4'" onmouseout="this.style.color='#64748b'">Home</a>
+          <a href="../Information/" style="color:var(--dim);font-size:0.875rem;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#06b6d4'" onmouseout="this.style.color='#64748b'">Information</a>
+          <a href="../Services/" style="color:var(--dim);font-size:0.875rem;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#06b6d4'" onmouseout="this.style.color='#64748b'">Services</a>
+          <a href="../Contact/" style="color:var(--dim);font-size:0.875rem;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#06b6d4'" onmouseout="this.style.color='#64748b'">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-size:0.75rem;font-weight:600;color:var(--text);letter-spacing:0.08em;margin-bottom:16px;">CONTACT</h4>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="color:var(--dim);font-size:0.85rem;">hello@jessicachenot.com</div>
+          <div style="color:var(--dim);font-size:0.85rem;">+61 400 000 000</div>
+          <div style="color:var(--dim);font-size:0.85rem;">Mon &ndash; Fri: 8am &ndash; 5pm</div>
+        </div>
+      </div>
+    </div>
+    <div class="divider" style="margin-bottom:22px;"></div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px;">
+      <div style="color:#475569;font-size:0.78rem;">&copy; 2025 Jessica Chen Occupational Therapy. All rights reserved.</div>
+      <div style="color:#475569;font-size:0.78rem;">AHPRA Registered &nbsp;&middot;&nbsp; OT Australia Member</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleNav() {
+    const menu = document.getElementById('mob-menu');
+    const btn = document.getElementById('ham-btn');
+    menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', menu.classList.contains('open'));
+  }
+</script>
+</body>
+</html>
